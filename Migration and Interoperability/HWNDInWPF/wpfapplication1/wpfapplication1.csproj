@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWpf>true</UseWpf>
     <EnableDefaultItems>false</EnableDefaultItems>
   </PropertyGroup>
@@ -35,7 +35,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\hwndinwpf\hwndInWPF.vcxproj" />
+    <ProjectReference Include="..\hwndinwpf\hwndInWPF.vcxproj">
+      <SetTargetFramework>TargetFramework=$(TargetFramework)</SetTargetFramework>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="MyApp.xaml">
